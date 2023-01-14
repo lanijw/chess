@@ -1,0 +1,13 @@
+# IDEA
+.idea/
+
+# LaTeX
+*.aux
+*.log
+*.out
+*.synctex.gz
+*.toc
+*-eps-converted-to.pdf
+
+# Util
+res/chessboard.pdf

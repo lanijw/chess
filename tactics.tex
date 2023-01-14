@@ -1,0 +1,65 @@
+\section{Tactics}
+
+Tactics are short-term sequences of moves giving the executing side an advantage.
+
+\subsection{Fork}
+
+Forks attack multiple pieces at the once, resulting in at least one of these pieces being taken.
+
+\begin{figure}[H]
+  \centering
+  \newgame
+  \mainline{1. Ne7+ Kh8 2. Nxc6}\\
+  \chessboard[smallboard, moverstyle=circle, mover=w, setwhite={Pa2, Kg1, Nd5}, addblack={Qc6, Kg8}, pgfstyle=knightmove, color=orange, markmoves={d5-e7, e7-c6, e7-g8}]
+  \caption{Example of a fork.}
+  \label{fig:fork}
+\end{figure}
+
+\subsection{Pin}
+
+Pins restrict the movement of one piece covering another more valuable piece (relative pi) or the king (absolute pin).
+
+\begin{figure}[H]
+  \centering
+  \newgame
+  \mainline{1. Re1 Qe2 2. Rxe2+ Kxe2}\\
+  \chessboard[smallboard, moverstyle=circle, mover=w, setwhite={Kg1, Qd1, Rf1}, addblack={Qe4, Ke8}, pgfstyle=knightmove, color=orange, markmoves={f1-e1}]
+  \caption{Example of an absolute pin.}
+  \label{fig:pin}
+\end{figure}
+
+\subsection{Skewer}
+
+Skewers are the opposite of a pin. The more valuable piece escapes the attack and reveals the other piece, which can now be taken.
+
+\begin{figure}[H]
+  \centering
+  \newgame
+  \mainline{1. Qg8 Ke5 2. Qxb3}\\
+  \chessboard[smallboard, moverstyle=circle, mover=w, setwhite={Kh1, Qg2, Ph2}, addblack={Ke6, Qb3, Pa3}, pgfstyle=knightmove, color=orange, markmoves={g2-g8}]
+  \caption{Example of a king-queen skewer.}
+  \label{fig:skewer}
+\end{figure}
+
+\subsection{Other Tactics}
+
+\begin{description}
+  \item[Attraction] Force or lure opponent's piece onto a bad square.
+  \item[Battery] Line up two or more pieces on the same diagonal, rank or file.
+  \begin{itemize}
+    \item Rooks
+    \item Bishop \& Queen
+    \item Alekhine's Gun (two rooks with a Queen tailing)
+  \end{itemize}
+  \item[Counter Threat] Defend against a threat by threatening a more valuable piece.
+  \item[Deflection] Pull a defender from a square it's defending.
+  \item[Windmill] Use discovered checks to capture multiple pieces.
+  \item[Perpetual Check] Force draw by repetition with checks.
+  \item[f-Pawn Weakness] Due to only the king defending the f-pawns, they are very vulnerable.
+  \item[Greek Gift Sacrifice] Sacrifice the bishop to destroy the pawn-structure in front of a castled king.
+  \item[Interference] Place a piece in the line of sight of an opposing piece as a defense.
+  \item[Overloaded] A piece that defends multiple targets, that can't all be defended at once.
+  \item[Zugzwang] Play a move that makes any of the opponent's moves a bad move.
+  \item[Zwischenzug] An intermediate move (usually involving a check) that helps you gain a tempo.
+  \item[X-Ray] The ability of pieces to see through other pieces.
+\end{description}

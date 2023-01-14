@@ -1,0 +1,40 @@
+\section{Puzzles}
+
+\begin{figure}[H]
+  \centering
+  \chessboard[moverstyle=circle, mover=w, setwhite={Ke1, Ra1, Nf1, Be2, Qh8, Pa2, Pb2, Pc2, Pf2, Pg3}, addblack={Kf8, Qh1, Re8, Ng8, Bg4, Pa7, Pb7, Pc7, Pd6, Pf7, Ph7}]
+  \caption{What is the only move, that avoids a forced checkmate?}
+  \label{fig:puzzle-1}
+\end{figure}
+
+\newpage
+\subsection{Solutions}
+
+{{\hypersetup{hidelinks}\paragraph{\hyperref[fig:puzzle-1]{Puzzle 1}} \textbf{1. O-O-O}}
+
+\begin{figure}[H]
+  \centering
+  \chessboard[
+    moverstyle=circle,
+    mover=w,
+    setwhite={Ke1, Ra1, Nf1, Be2, Qh8, Pa2, Pb2, Pc2, Pf2, Pg3},
+    addblack={Kf8, Qh1, Re8, Ng8, Bg4, Pa7, Pb7, Pc7, Pd6, Pf7, Ph7},
+    pgfstyle=straightmove,
+    color=red,
+    markmoves={a1-d1, e1-d1, e1-d2, a2-a3, a2-a4, b2-b3, b2-b4, c2-c3, c2-c4, h8-h7, h8-g7, h8-g8, h8-f6, h8-e5, h8-d4, h8-c3, f2-f3, f2-f4, a1-b1, a1-c1},
+    color=green,
+    markmoves={e1-c1}
+  ]
+  \caption{The only good move is \textbf{1. O-O-O}. All other moves are marked in red.}
+  \label{fig:puzzle-sol-1}
+\end{figure}
+
+\begin{enumerate}
+  \item \textbf{1. \symqueen xh7} looses a queen.
+  \item \textbf{1. \symqueen xg8+}, \textbf{1. \symqueen g7+} and \textbf{1. \symqueen e5} looses a queen and doesn't prevent the forced checkmate (see point 4).
+  \item \textbf{1. f3} is pointless, because of \textbf{1... \symbishop xf3}.
+  \item \textbf{1. [a/b/c][3/4]}, \textbf{1. f4} and \textbf{1. \symrook [b/c]1} allow mate in two with \textbf{1... \symrook xe2+ 2. \symking d1 \symqueen xf1\#}.
+  \item \textbf{1. \symrook d1} allows mate in one with \textbf{1... \symrook xe2\#}.
+  \item \textbf{1. \symking d1} allows mate in two with \textbf{1... \symrook xe2 2. ? \symrook xf1\#}. White's second move cannot prevent the mate.
+  \item \textbf{1. \symking d2} allows mate in two with \textbf{1... \symrook xe2+ 2. \symking [c/d]1 \symqueen xf1\#} and mate in 5 with \textbf{1... \symrook xe2+ 2. \symking [c/d]3 \symqueen f3+ 3. \symking [b/c/d]4 \symrook e4+ 4. \symking [a/b/d]5 \symqueen f5+ 5. \symqueen e5 \symqueen xe5\#}
+\end{enumerate}

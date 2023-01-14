@@ -1,0 +1,58 @@
+\documentclass[11pt, dvipsnames]{article} % default 10pt
+
+\usepackage{res/sty/en}
+\usepackage{res/sty/document}
+
+% --- Bibliography ---
+%\usepackage{biblatex}[style=ieeetr]
+%\bibliography{res/refs}
+
+% --- Title Page and Footer Details ---
+\newcommand{\mytitle}{Chess}
+\newcommand{\documenttype}{Compendium}
+\newcommand{\shortauthor}{Lani Wagner}
+\newcommand{\myauthor}{\textit{Lani Wagner}}
+
+%\renewcommand{\labelenumii}{\arabic{enumi}.\arabic{enumii}} % Change second level of enumerated lists to arabic numbers
+
+% --- Document-specific Adjustments ---
+\usepackage{xskak} % Chess package
+\counterwithin{figure}{section} % Modifies figure numbering to be section-specific.
+
+\begin{document}
+
+  \begin{titlepage}
+    \begin{center}
+      \vspace{1cm}
+
+      \textbf{\Huge \mytitle}
+
+      \vspace{.5cm}
+
+      {\Large \documenttype}
+
+      \vspace{.5cm}
+
+      \shortauthor
+
+      \vspace{2cm}
+
+      \includegraphics[width=0.4\textwidth]{res/img/laniw_logo-tight}
+
+      \vfill
+
+      \begin{abstract}
+        This document primarily serves as an aid for me to remember past chess lessons. If anyone else finds use from this document, you're welcome!
+      \end{abstract}
+
+      {\hypersetup{hidelinks} \tableofcontents}
+    \end{center}
+  \end{titlepage}
+  \newpage
+
+  \include{tactics}
+  \include{puzzles}
+\end{document}
+
+
+
