@@ -3,7 +3,7 @@
 \begin{figure}[H]
   \centering
   \chessboard[moverstyle=circle, mover=w, setwhite={Ke1, Ra1, Nf1, Be2, Qh8, Pa2, Pb2, Pc2, Pf2, Pg3}, addblack={Kf8, Qh1, Re8, Ng8, Bg4, Pa7, Pb7, Pc7, Pd6, Pf7, Ph7}]
-  \caption{What is the only move, that avoids a forced checkmate?}
+  \caption{What move avoids a forced checkmate?}
   \label{fig:puzzle-1}
 \end{figure}
 
@@ -29,12 +29,15 @@
   \label{fig:puzzle-sol-1}
 \end{figure}
 
-\begin{enumerate}
+The following list discusses all possible moves and shows why they lead to mate.
+
+\begin{itemize}
   \item \textbf{1. \symqueen xh7} looses a queen.
   \item \textbf{1. \symqueen xg8+}, \textbf{1. \symqueen g7+} and \textbf{1. \symqueen e5} looses a queen and doesn't prevent the forced checkmate (see point 4).
   \item \textbf{1. f3} is pointless, because of \textbf{1... \symbishop xf3}.
-  \item \textbf{1. [a/b/c][3/4]}, \textbf{1. f4} and \textbf{1. \symrook [b/c]1} allow mate in two with \textbf{1... \symrook xe2+ 2. \symking d1 \symqueen xf1\#}.
-  \item \textbf{1. \symrook d1} allows mate in one with \textbf{1... \symrook xe2\#}.
-  \item \textbf{1. \symking d1} allows mate in two with \textbf{1... \symrook xe2 2. ? \symrook xf1\#}. White's second move cannot prevent the mate.
-  \item \textbf{1. \symking d2} allows mate in two with \textbf{1... \symrook xe2+ 2. \symking [c/d]1 \symqueen xf1\#} and mate in 5 with \textbf{1... \symrook xe2+ 2. \symking [c/d]3 \symqueen f3+ 3. \symking [b/c/d]4 \symrook e4+ 4. \symking [a/b/d]5 \symqueen f5+ 5. \symqueen e5 \symqueen xe5\#}
+  \item \textbf{1. [a/b/c][3/4]}, \textbf{1. f4} and \textbf{1. \symrook [b/c]1} allow -M2 with \textbf{1... \symrook xe2+ 2. \symking d1 \symqueen xf1\#}.
+  \item \textbf{1. \symrook d1} allows -M1 with \textbf{1... \symrook xe2\#}.
+  \item \textbf{1. \symking d1} allows -M2 with \textbf{1... \symrook xe2 2. ? \symrook xf1\#}. White's second move cannot prevent the mate.
+  \item \textbf{1. \symking d2} allows -M2 with \textbf{1... \symrook xe2+ 2. \symking [c/d]1 \symqueen xf1\#} and -M5 with \textbf{1... \symrook xe2+ 2. \symking [c/d]3 \symqueen f3+ 3. \symking [b/c/d]4 \symrook e4+ 4. \symking [a/b/d]5 \symqueen f5+ 5. \symqueen e5 \symqueen xe5\#}
+\end{itemize}
 \end{enumerate}
