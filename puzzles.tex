@@ -7,6 +7,13 @@
   \label{fig:puzzle-1}
 \end{figure}
 
+\begin{figure}[H]
+  \centering
+  \chessboard[moverstyle=circle, mover=w, setwhite={Kg1, Rf1, Ra1, Qb6, Bc4, Pb3, Pd3, Pf2, Pg2, Ph2}, addblack={Kg8, Rd4, Qg5, Pf7, Pg6, Ph7, Nh6}]
+  \caption{What move initiates an +M1 or captures a queen?}
+  \label{fig:puzzle-2}
+\end{figure}
+
 \newpage
 \subsection{Solutions}
 
@@ -40,4 +47,30 @@ The following list discusses all possible moves and shows why they lead to mate.
   \item \textbf{1. \symking d1} allows -M2 with \textbf{1... \symrook xe2 2. ? \symrook xf1\#}. White's second move cannot prevent the mate.
   \item \textbf{1. \symking d2} allows -M2 with \textbf{1... \symrook xe2+ 2. \symking [c/d]1 \symqueen xf1\#} and -M5 with \textbf{1... \symrook xe2+ 2. \symking [c/d]3 \symqueen f3+ 3. \symking [b/c/d]4 \symrook e4+ 4. \symking [a/b/d]5 \symqueen f5+ 5. \symqueen e5 \symqueen xe5\#}
 \end{itemize}
+
+
+\newpage
+{{\hypersetup{hidelinks}\paragraph{\hyperref[fig:puzzle-2]{Puzzle 2}} \textbf{1. Qxd4}}
+
+\begin{figure}[H]
+  \centering
+  \chessboard[
+    moverstyle=circle,
+    mover=w,
+    setwhite={Kg1, Rf1, Ra1, Qb6, Bc4, Pb3, Pd3, Pf2, Pg2, Ph2},
+    addblack={Kg8, Rd4, Qg5, Pf7, Pg6, Ph7, Nh6},
+    pgfstyle=straightmove,
+    color=green,
+    markmoves={b6-d4},
+  ]
+  \caption{The best move is \textbf{1. Qxd4}. Possible follow-ups and white's response are marked with arrows.}
+  \label{fig:puzzle-sol-2}
+\end{figure}
+
+The following list discusses black's possible responses to white's mate threat and details white's best response.
+
+\begin{enumerate}
+  \item \textbf{1... \symqueen [a5/e5/f6/xg2+]} looses a queen and can't prevent the checkmate. \textbf{2. [\symrook xa5/\symqueen xe5/xf6/\symking xg2] ... 3. \symrook a8\#}. Black has no possible counter for the checkmate threat as move 2.
+  \item \textbf{1... [\symknight[f5/g4]/\symqueen [e7/c1/d2/g2/e3/g3/[f/g/h]4/[b/c/d/f/h]5]]} does nothing. \textbf{2. \symrook a8\#}
+  \item \textbf{1... \symqueen d8} delays the mate to +M5. \textbf{2. \symqueen xd8+ \symking g7 3. \symqueen d4+ \symking f8 4. \symrook a8+ \symking e7 5. \symqueen d8\#}
 \end{enumerate}
