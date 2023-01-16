@@ -17,7 +17,15 @@
 
 % --- Document-specific Adjustments ---
 \usepackage{xskak} % Chess package
+\usepackage{dirtree} % Tree-like lists for openings
 \counterwithin{figure}{section} % Modifies figure numbering to be section-specific.
+
+% --- Chess piece shorthands ---
+\renewcommand{\k}{\symking}
+\newcommand{\q}{\symqueen}
+\renewcommand{\r}{\symrook}
+\renewcommand{\b}{\symbishop}
+\newcommand{\n}{\symknight}
 
 \begin{document}
 
@@ -51,6 +59,7 @@
   \newpage
 
   \include{tactics}
+  \include{Openings}
   \include{puzzles}
   \include{glossary}
 \end{document}
